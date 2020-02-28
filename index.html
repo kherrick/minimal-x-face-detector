@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>minimal-x-face-detector</title>
+</head>
+<style>
+  :root {
+    text-align: center;
+  }
+
+  [buttons] {
+    margin-bottom: 1rem;
+  }
+</style>
+<body>
+  <h1>minimal-x-face-detector</h1>
+  <div buttons>
+    <button onclick="XFaceDetector.startVideo()">start video</button>
+    <button onclick="XFaceDetector.stopVideo()">stop video</button>
+    <button onclick="XFaceDetector.startPredictions()">start predictions</button>
+    <button onclick="XFaceDetector.stopPredictions()">stop predictions</button>
+  </div>
+  <div>
+    <x-face-detector
+      id="XFaceDetector"
+      imgUrl='https://avatars3.githubusercontent.com/u/3065761'
+      wasmPath='https://kherrick.github.io/x-face-detector/XFaceDetector/tfjs-backend-wasm.wasm'
+    >
+      LOADING...
+    </x-face-detector>
+  </div>
+  <script
+    src="https://kherrick.github.io/x-face-detector/XFaceDetector/XFaceDetector.js"
+    type="module"
+  ></script>
+</body>
+</html>
